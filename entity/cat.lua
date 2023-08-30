@@ -12,8 +12,4 @@ local function update(e, dt)
   e:Move(e.Data.dir, 0, 0)
 end
 
-local function meow(e, args)
-  print("meow")
-end
-
-return {init=init,update=update,rpcs={meow=meow}}
+return {init=init,update=update}
