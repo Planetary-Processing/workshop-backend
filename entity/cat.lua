@@ -1,5 +1,6 @@
 local function init(e)
   e.Data.dir = -0.5
+  e.Chunkloader = true
 end
 
 local function update(e, dt)
