@@ -17,9 +17,14 @@ local function update(e, dt)
     e.Data.target = {x=math.random(-100,100),y=math.random(-100,100)}
   else
     if dx > dy then
+      dx = 1
       dy = 0
     elseif dy > dx then
+      dy = 1
       dx = 0
+    else
+      dx = 1
+      dy = 1
     end
     e:Move(dx, dy, 0)
   end
