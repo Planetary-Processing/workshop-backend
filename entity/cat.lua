@@ -11,15 +11,15 @@ local function update(e, dt)
   if dx*dx < 4 and dy*dy < 4 then
     e.Data.target = {x=math.random(500),y=math.random(500)}
   else
-    if dx > dy then
-      dx = 1
+    if dx*dx > dy*dy then
+      dx = dx < 0 and -1 or 1
       dy = 0
-    elseif dy > dx then
-      dy = 1
+    elseif dy*dy > dx*dx then
+      dy = dy < 0 and -1 or 1
       dx = 0
     else
-      dx = 1
-      dy = 1
+      dx = dx < 0 and -1 or 1
+      dy = dy < 0 and -1 or 1
     end
     e:Move(dx, dy, 0)
   end
