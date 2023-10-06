@@ -4,10 +4,11 @@ local function init(e)
 end
 
 local function update(e, dt)
+  print(e)
   x, y, _ = e:GetPosition()
   local dx = e.Data.target.x - x
   local dy = e.Data.target.y - y
-  if dx < 2 and dy < 2 then
+  if dx*dx < 4 and dy*dy < 4 then
     e.Data.target = {x=math.random(500),y=math.random(500)}
   else
     if dx > dy then
