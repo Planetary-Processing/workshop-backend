@@ -4,7 +4,6 @@ local function init(e)
 end
 
 local function update(e, dt)
-  print(e)
   x, y, _ = e:GetPosition()
   local dx = e.Data.target.x - x
   local dy = e.Data.target.y - y
