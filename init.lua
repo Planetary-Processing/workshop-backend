@@ -1,10 +1,10 @@
 function init()
-  if chunk.x == 1 and chunk.y == 1 and not chunk.generated then
+  if chunk.X == 1 and chunk.Y == 1 and not chunk.Generated then
     for i=1,20 do
-      api.createEntity("cat", 35, 25, 1, {name="jar jar "..i})
+      api.CreateEntity("cat", 35, 25, 1, {name="jar jar "..i})
     end
   end
-  if not chunk.generated then
-    api.createEntity("tree", chunk.x*chunk.size + math.random()*chunk.size, chunk.y*chunk.size + math.random()*chunk.size, 1)
+  if not chunk.Generated then
+    api.CreateEntity("tree", chunk.X*chunk.Size + math.random()*chunk.Size, chunk.Y*chunk.Size + math.random()*chunk.Size, 1)
   end
 end
