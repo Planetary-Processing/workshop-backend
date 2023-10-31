@@ -5,6 +5,6 @@ function init()
     end
   end
   if not chunk.Generated then
-    api.CreateEntity("tree", chunk.X*chunk.Size + math.random()*chunk.Size, chunk.Y*chunk.Size + math.random()*chunk.Size, 1)
+    api.CreateEntity("tree", chunk.X*chunk.Size + math.random()*chunk.Size, chunk.Y*chunk.Size + math.random()*chunk.Size, 1, {})
   end
 end
