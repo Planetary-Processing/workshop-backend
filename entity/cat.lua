@@ -1,4 +1,5 @@
 local function init(e)
+  print(e)
   e.Chunkloader = true
   e.Data.target = {x=math.random(100),y=math.random(100)}
 end
