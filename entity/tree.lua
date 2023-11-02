@@ -4,4 +4,8 @@ end
 local function update(e, dt)
 end
 
-return {init=init,update=update}
+local function message(e, msg)
+end
+
+return {init=init,update=update,message=message}
+
