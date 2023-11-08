@@ -21,7 +21,7 @@ local function update(e, dt)
       dx = dx < 0 and -1 or 1
       dy = dy < 0 and -1 or 1
     end
-    e:Move(dx, dy, 0)
+    e:Move(dx*dt, dy*dt, 0)
   end
 end
 
