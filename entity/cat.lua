@@ -1,7 +1,7 @@
 local function init(e)
   print(e)
   e.Chunkloader = true
-  e.Data.target = {x=math.random(100),y=math.random(100)}
+  e.Data.target = {x=math.random(-64,64),y=math.random(-64,64)}
 end
 
 local function update(e, dt)
@@ -9,7 +9,7 @@ local function update(e, dt)
   local dx = e.Data.target.x - x
   local dy = e.Data.target.y - y
   if dx*dx < 4 and dy*dy < 4 then
-    e.Data.target = {x=math.random(-250,250),y=math.random(-250, 250)}
+    e.Data.target = {x=math.random(-96,96),y=math.random(-96, 96)}
   else
     if dx*dx > dy*dy then
       dx = dx < 0 and -1 or 1
