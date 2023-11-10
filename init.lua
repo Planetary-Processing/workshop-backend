@@ -2,6 +2,7 @@ function init()
   if chunk.X == 1 and chunk.Y == 1 and not chunk.Generated then
     for i=1,20 do
       api.CreateEntity("cat", 35, 25, 1, {name="jar jar "..i})
+      api.CreateEntity("dog", 35, 25, 1, {name="holly "..i})
     end
   end
   if not chunk.Generated then
