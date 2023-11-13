@@ -5,9 +5,8 @@ local function update(p, dt)
 end
 
 local function message(e, msg)
-  print(msg)
-  e:Move(e.x,e.y,0)
-  print("moved")
+  print(e.Data)
+  e:Move(e.Data.x,e.Data.y,0)
 end
 
 return {init=init,update=update,message=message}
