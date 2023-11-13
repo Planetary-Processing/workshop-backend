@@ -7,6 +7,7 @@ end
 local function message(e, msg)
   print(msg)
   e:Move(e.x,e.y,0)
+  print("moved")
 end
 
 return {init=init,update=update,message=message}
