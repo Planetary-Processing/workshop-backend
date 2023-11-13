@@ -6,8 +6,7 @@ end
 
 local function message(e, msg)
   print(msg)
-  print(msg.Data)
-  e:Move(e.Data.x,e.Data.y,0)
+  e:Move(msg.Data.x,msg.Data.y,0)
 end
 
 return {init=init,update=update,message=message}
