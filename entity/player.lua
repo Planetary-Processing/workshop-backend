@@ -5,7 +5,7 @@ local function update(p, dt)
 end
 
 local function message(e, msg)
-  print(e.Data)
+  print(e)
   e:Move(e.Data.x,e.Data.y,0)
 end
 
