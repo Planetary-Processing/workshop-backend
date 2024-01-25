@@ -8,10 +8,6 @@ function init()
       -- data is an arbitrary lua table
       api.CreateEntity("cat", -35, 25, 1, {name="jar jar "..i})
     end
-    for i=1,5 do
-      -- same as above but different entity type
-      api.CreateEntity("dog", 35, 25, 1, {name="holly "..i})
-    end
   end
   if not chunk.Generated then
     for i=1,math.random(4) do
