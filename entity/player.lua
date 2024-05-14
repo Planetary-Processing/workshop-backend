@@ -17,7 +17,7 @@ local function message(e, msg)
   if msg.Client then
     local x, y, z = msg.Data.x, msg.Data.y, msg.Data.z
     if msg.Data.threedee then
-      e:MoveTo(x,z,y) -- SwarmPlay uses 'y' for depth in 3 dimensional games, and 'z' for height
+      e:MoveTo(x,z,y) -- PP uses 'y' for depth in 3 dimensional games, and 'z' for height
     else
       e:Move(x,y,0)
     end
