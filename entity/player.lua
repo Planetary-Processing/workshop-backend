@@ -2,6 +2,7 @@
 local function init(p)
   -- set player to a chunkloader, thous this is technically unnecessary as the game engine will force this regardless
   p.Chunkloader = true
+  p.Data.hello = "hello"
 end
 
 -- update called each simulation step, with dt being the number of seconds since last step (float)
