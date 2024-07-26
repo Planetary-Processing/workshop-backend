@@ -1,6 +1,6 @@
 -- init called on creation of entity
 local function init(e)
-  -- set e.Chunkloader = true means this entity's chunk will always remain loaded, and any chunks it wants to move into will be loaded
+  -- set e.Chunkloader = true means this entity's chunk will always remain loaded
   e.Chunkloader = true
   -- e.Data is an arbitrary table, this is persisted, populated here with target coordinates
   e.Data.target = {x=math.random(-64,64),y=math.random(-64,64)}
