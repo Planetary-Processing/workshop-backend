@@ -12,8 +12,6 @@ end
 -- called when this entity receives a message
 -- as this is the player entity it can also receive messages from the game client
 local function message(self, msg)
-    -- print and error output can be viewed per-chunk in the control panel
-    print(msg)
     -- if this is a client message (i.e. from a game client) then look in the message's Data table
     if msg.Client then
         local x, y, z = msg.Data.x, msg.Data.y, msg.Data.z
