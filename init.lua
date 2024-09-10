@@ -10,13 +10,9 @@ function init()
     end
   end
   if not chunk.Generated then
-    for i=1,chunk.Size,8 do
-      for j=1,chunk.Size,8 do
-        if math.random() < 0.1 then
-          -- create some tree entities at random locations, 'math' and other standard lua library functions (excluding io/os operations) are included
-          api.entity.Create("tree", chunk.X*chunk.Size + i + math.random() - 0.5, chunk.Y*chunk.Size + j + math.random() -0.5, 0, {})
-        end
-      end
+    for i=1,25 do
+      -- create some tree entities at random locations, 'math' and other standard lua library functions (excluding io/os operations) are included
+      api.entity.Create("tree", (chunk.X + math.random()) * chunk.Size, (chunk.Y+math.random()) * chunk.Size, 0, {})
     end
   end
 end
