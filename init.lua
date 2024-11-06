@@ -10,6 +10,7 @@ function init()
     end
   end
   if not chunk.Generated then
+    print("Initialised chunk at (", chunk.X, chunk.Y, ")")
     for i=1,25 do
       -- create some tree entities at random locations, 'math' and other standard lua library functions (excluding io/os operations) are included
       api.entity.Create("tree", (chunk.X + math.random()) * chunk.Size, (chunk.Y+math.random()) * chunk.Size, 0, {})
