@@ -15,11 +15,7 @@ local function message(self, msg)
     -- if this is a client message (i.e. from a game client) then look in the message's Data table
     if msg.Client then
         local x, y, z = msg.Data.x, msg.Data.y, msg.Data.z
-        if msg.Data.threedee then
-            self:MoveTo(x, z, y) -- PP uses 'y' for depth in 3 dimensional games, and 'z' for height
-        else
-            self:Move(x, y, 0)
-        end
+        self:Move(x, y, 0)
     end
 end
 
