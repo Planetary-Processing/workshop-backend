@@ -15,7 +15,7 @@ local function update(self, dt)
     local dy = self.Data.target.y - y
     -- if we're close enough then consider ourselves successful
     if dx * dx < 4 and dy * dy < 4 then
-        self.Data.target = { x = math.random(-96, 96), y = math.random(-96, 96) }
+        self.Data.target = { x = math.random(-chunk.Size+1, chunk.Size*2-1), y = math.random(-chunk.Size, chunk.Size*2-1) }
     else
         -- determine largest direction of motion
         if dx * dx > dy * dy then
