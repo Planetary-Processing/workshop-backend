@@ -18,6 +18,7 @@ local function message(self, msg)
     -- if this is a client message (i.e. from a game client) then look in the message's Data table
     if msg.Client then
         if msg.Data.tag then
+            print("I received a tag message to tag someone! Woo!")
             for _,e in pairs(self:GetNearbyEntities(8)) do
                 api.entity.Message(e.ID, {tag=self.Data.team})
                 break
