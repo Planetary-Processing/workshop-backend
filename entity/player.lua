@@ -19,7 +19,7 @@ local function message(self, msg)
     if msg.Client then
         if msg.Data.tag then
             print("I received a tag message to tag someone! Woo!")
-            for _,e in pairs(self:GetNearbyEntities(8)) do
+            for _,e in pairs(self:GetNearbyEntities(1)) do
                 api.entity.Message(e.ID, {tag=self.Data.team})
                 break
             end
