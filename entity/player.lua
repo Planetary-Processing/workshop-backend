@@ -27,6 +27,8 @@ local function message(self, msg)
             local x, y, z = msg.Data.x, msg.Data.y, msg.Data.z
             self:Move(x, y, 0)
         end
+    else
+        self.Data.team = msg.Data.tag
     end
 end
 
